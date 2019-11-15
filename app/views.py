@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from app.models import DogProduct, Purchase, DogTag, NewDogTagForm
+from app.models import DogProduct, Purchase, DogTag, NewDogTagForm, NewDog
 from django.contrib import messages
 from datetime import datetime
 
@@ -54,3 +54,17 @@ def new_dog_tag(request):
 def dog_tag_list(request):
     dog_tags = DogTag.objects.all()
     return render(request, "dog_tag_list.html", {"dog_tags": dog_tags})
+
+
+def new_dog(request):
+    if request.method == "GET":
+        return render(request, "new_dog.html")
+    elif request.method == "POST":
+        form = NewDogForm(request.POST)
+        if form.is_valid():
+            dog_type = form.cleaned_data["dog_type"]
+            dog_name = form.cleaned_data["dog_name"]
+            dog_birthday = form.cleaned_data["dog_birthday"]
+            newdog = NewDog.objects.create(
+                dog_type=dog_type, dog_name=dog_name
+            )
