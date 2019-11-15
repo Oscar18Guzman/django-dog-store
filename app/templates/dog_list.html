@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 id="dog-title">Dogs</h1>
+<ul class="dog-tags">
+{% for dog in dog_list %}
+<li class="dogs mt-5">
+    <img class="dog-image"/>
+    <div class="dog_name">Name : {{ dog.dog_name }}</div>
+    <div class="dog-type">Type: {{ dog.dog_type }}</div>
+    <div class="dog-birthday">Birthday: {{ dog.dog_birthday }}</div>
+</li>
+{% endfor %}
+</ul>
+{% endblock content %}

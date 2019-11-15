@@ -3,12 +3,12 @@
 <form action="{% url 'new_dog' %}" method="post" class="col-3">
     {% csrf_token %}
     <div class="form-group">
-        <label for="owner_name">Dog type</label>
-        <input type="text" class="form-control" name="owner_name" id="owner_name" required>
+        <label for="dog_type">Dog type</label>
+        <input class="form-control" name="dog_type" id="dog_type">
     </div>
     <div class="form-group">
         <label for="dog_name">Dog Name</label>
-        <input type="text" class="form-control" name="dog_name" id="dog_name" required>
+        <input class="form-control" name="dog_name" id="dog_name" required>
     </div>
     <div class="form-group">
         <label for="dog_birthday">Dog birthday</label>
