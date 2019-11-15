@@ -7,6 +7,12 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;
+}
+.all-dogs {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
     background: rgb(192,190,188);
     background: radial-gradient(circle, rgba(192,190,188,1) 0%, rgba(207,207,207,1) 17%, rgba(255,253,251,0.965666955258666) 37%);
 }
