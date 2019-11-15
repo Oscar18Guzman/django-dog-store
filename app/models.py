@@ -26,3 +26,14 @@ class NewDogTagForm(forms.Form):
     owner_name = forms.CharField()
     dog_name = forms.CharField()
     dog_birthday = forms.DateField()
+
+
+class NewDog(models.Model):
+    dog_type = models.TextField()
+    dog_name = models.TextField()
+    dog_birthday = forms.DateField()
+
+class NewDogForm(forms.Form):
+    dog_type = forms.CharField()
+    dog_name = forms.CharField()
+    dog_birthday = forms.DateField()
