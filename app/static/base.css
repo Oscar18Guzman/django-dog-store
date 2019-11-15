@@ -1,12 +1,17 @@
+body {
+    background-color: white;
+}
+
 .dog-tags {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;
+    background: rgb(192,190,188);
+    background: radial-gradient(circle, rgba(192,190,188,1) 0%, rgba(207,207,207,1) 17%, rgba(255,253,251,0.965666955258666) 37%);
 }
 
 .dog-tag {
-    font-family: cursive;
     background-color: goldenrod;
     padding: 1rem;
     border-radius: 1rem;
@@ -29,3 +34,43 @@
     flex: 1;
     margin-bottom: 2rem;
 }
+
+
+.dogs {
+    display: flex;
+    background-color: rgb(216, 216, 216);
+    height: 220px;
+    width: 500px;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 3.5px outset rgba(180,180,180,.5);
+    position: relative;
+    font-weight: bold;
+} 
+
+.dog-image {
+    border-radius: 1rem;
+    height: 130px;
+    width: 130px;
+    border: 3px outset rgba(180,180,180,.5);
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.dog_name {
+    position: absolute;
+    right: 18px;
+}
+.dog-type {
+    position: absolute;
+    right: 18px;
+    bottom: 20px;
+}
+.dog-birthday {
+    position: absolute;
+    right: 18px;
+    bottom: 80px;
+}
+
