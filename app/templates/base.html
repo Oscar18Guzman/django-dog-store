@@ -8,6 +8,7 @@
     <title>Dog Store</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'base.css' %}">
+    <script src="{% static 'randomImage.js' %}" defer></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5">
@@ -21,6 +22,12 @@
         </li>
         <li class="nav-item {% if request.resolver_match.url_name == 'dog_tag_list' %}active{% endif %}">
             <a href="{% url 'dog_tag_list' %}" class="nav-link">View Dog Tags</a>
+        </li>
+        <li class="nav-item {% if request.resolver_match.url_name == 'new_dog' %}active{% endif %}">
+            <a href="{% url 'new_dog' %}" class="nav-link">Create Dog</a>
+        </li>
+        <li class="nav-item {% if request.resolver_match.url_name == 'dog_list' %}active{% endif %}">
+            <a href="{% url 'dog_list' %}" class="nav-link">View Dogs</a>
         </li>
     </ul>
 </nav>
