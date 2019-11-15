@@ -31,7 +31,7 @@ class NewDogTagForm(forms.Form):
 class NewDog(models.Model):
     dog_type = models.TextField()
     dog_name = models.TextField()
-    dog_birthday = forms.DateField()
+    dog_birthday = models.DateField()
 
 class NewDogForm(forms.Form):
     dog_type = forms.CharField()

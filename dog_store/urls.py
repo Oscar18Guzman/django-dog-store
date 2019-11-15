@@ -34,4 +34,5 @@ urlpatterns = [
     path("dogtag/new", views.new_dog_tag, name="new_dog_tag"),
     path("dogtag", views.dog_tag_list, name="dog_tag_list"),
     path("new_dog", views.new_dog, name="new_dog"),
+    path("dog_list", views.dog_list, name="dog_list"),
 ]
